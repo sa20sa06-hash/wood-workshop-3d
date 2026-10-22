@@ -1,0 +1,173 @@
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: Arial, Tahoma, sans-serif;
+  color: #edf2ed;
+  background: #111814;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #111814;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px;
+  background: #1b2820;
+  border-bottom: 1px solid #34483a;
+}
+
+h1, h2, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 7px;
+  font-size: 23px;
+}
+
+h1 span {
+  color: #d7a86e;
+}
+
+.topbar p {
+  margin-bottom: 0;
+  color: #a9b9ad;
+  font-size: 14px;
+}
+
+.logo {
+  font-size: 35px;
+  color: #d7a86e;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 16px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.viewer, .panel {
+  border: 1px solid #34443a;
+  border-radius: 16px;
+  background: #1a241e;
+  padding: 16px;
+  min-width: 0;
+}
+
+.viewer-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.viewer-heading h2, .panel h2 {
+  font-size: 18px;
+}
+
+.status {
+  font-size: 11px;
+  color: #d7c09c;
+}
+
+#canvas-container {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #e7e4dc;
+}
+
+#canvas-container canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+#loading {
+  position: absolute;
+  inset: 45% 0 auto;
+  text-align: center;
+  color: #28352b;
+}
+
+.hint {
+  margin: 12px 0 0;
+  color: #aab9ae;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.panel label {
+  display: block;
+  margin: 15px 0 7px;
+  color: #dce6dd;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  min-height: 45px;
+  border: 1px solid #46594b;
+  border-radius: 9px;
+  padding: 10px;
+  background: #101914;
+  color: #fff;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  min-height: 48px;
+  margin-top: 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #b7834e;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+#message {
+  margin: 12px 0 0;
+  color: #b9c9bc;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #9aaa9e;
+  font-size: 12px;
+}
+
+@media (min-width: 760px) {
+  .layout {
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 1fr);
+    align-items: start;
+    padding: 24px;
+  }
+
+  #canvas-container {
+    height: 500px;
+  }
+}
